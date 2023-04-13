@@ -3,47 +3,103 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="icon" href="%PUBLIC_URL%/pledge_icon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link href="../src/index.css" rel="stylesheet" type="text/css" />
 
     <title>Pledge</title>
+
+    <!--CSS stylesheet link-->
+    <link href="../src/index.css" rel="stylesheet" type="text/css" />
+
+    <!--boxicons link-->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--remixicon link-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--google fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
   </head>
   <body>
-    <div class="navbar-logo-center wf-section">
-      <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
-        <div class="container">
-          <div class="navbar-wrapper-three">
-            <a href="#" class="navbar-brand-three w-nav-brand"><img src="images/pledge_img.png" loading="lazy" width="356" height="85" srcset="images/pledge_img.png 500w, images/pledge_img.png 800w, images/pledge_img.png 1080w, images/pledge_img.png 1536w" sizes="(max-width: 479px) 74vw, 356px" alt="" class="image"></a>
-            <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
-              <div class="nav-menu-three">
-                <ul role="list" class="nav-menu-block w-list-unstyled">
-                  <li>
-                    <a href="#" class="nav-link">About Us</a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link">Pricing</a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link">Documentation</a>
-                  </li>
-                </ul>
-                <ul role="list" class="nav-menu-block w-list-unstyled">
-                  <li>
-                    <a href="#" class="nav-link-accent">Login</a>
-                  </li>
-                  <li class="mobile-margin-top-10">
-                    <a href="#" class="button-primary w-button">Get Started</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-            <div class="menu-button w-nav-button">
-              <div class="w-icon-nav-menu"></div>
-            </div>
-          </div>
-        </div>
+    <!--START OF FIREBASE LINKS-->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAcBf3Xmw7R0xiX0xfdccVonyBryoRIwIQ",
+        authDomain: "pledge-33e41.firebaseapp.com",
+        projectId: "pledge-33e41",
+        storageBucket: "pledge-33e41.appspot.com",
+        messagingSenderId: "473113502223",
+        appId: "1:473113502223:web:d6317b4e0c9f032f53b97a",
+        measurementId: "G-EWJVBQR3Z2"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+    <!--END OF FIREBASE LINKS-->
+
+
+    <!--header-->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="logo">Pledge</a>
+
+        <ul class="navlist">
+          <li><a href="#">How it works</a></li>          
+          <li><a href="#">Causes we support</a></li>
+          <li><a href="#" class="get-started">Make a Pledge</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </nav>
+    </header>
+
+    <!--body-->
+    <section class="hero">
+      <div class="hero-text">
+        <h5>Fast, safe, convenient payments!</h5>
+        <p>Pay. Get paid. You set your own terms. Ready to make a Pledge?</p>
+        <a href="#" class="button auth-btn">Get Started</a>
       </div>
-    </div>
+      
+      <div class="hero-img">
+        <img src="./images/pledgePhone.png">
+      </div>
+    </section>
+
+
+    <!--footer-->
+    <footer>
+      <div class="footlist">
+        <a href="#" class="logo-footer">Pledge</a>
+
+
+        <ul class="navlist-foot">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Whats ahead?</a></li>
+        </ul>
+
+
+      </div>
+    </footer>
+
+    <!--custom js link-->
+    <script src="../src/App.js"></script>
+
   </body>
 </html>
