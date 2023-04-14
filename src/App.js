@@ -1,8 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import './index.css';
+
+
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.navlist');
+
+menu.onclick = () => {
+  menu.classList.toggle('bx-menu');
+  navlist.classList.toggle('open');
+}
+
 
 function App() {
+  /*
   return (
+
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -20,6 +33,9 @@ function App() {
       </header>
     </div>
   );
+
+  */
+
 }
 
 export default App;
