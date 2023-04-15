@@ -160,6 +160,11 @@ section{
   margin-bottom: 40px;
 }
 
+.make-a{
+  font-size: 20px;
+  text-align: center;
+}
+
 footer{
   position: fixed;
   left: 0;
@@ -277,7 +282,7 @@ footer .footlist{
     top: 100%;
     right: -100%;
     width: 290px;
-    height: 20vh;
+    height: 40vh;
     background: #02d871;
     display: flex;
     align-items: center;
@@ -296,20 +301,26 @@ footer .footlist{
     right: 0;
   }
 
+  .make-a {
+    font-size: 15px;
+    text-align: center;
+  }
+
 
   .navlist-foot{
     display: none;
   }
   .logo-footer{
     display: block;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 17%;
+    width: 22.5%;
     transition: .2s;
   }
 }
 
-@media (max-width: 680px){
+@media (max-width: 768px){
   .hero-img img{
     width: 80%;
     height: auto;
