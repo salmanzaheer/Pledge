@@ -1,7 +1,6 @@
 {
   "hosting": {
     "public": "public",
-    "site": "pledge-33e41",
     "ignore": [
       "firebase.json",
       "**/.*",
