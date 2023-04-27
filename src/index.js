@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-
+import { getDatabase, ref } from "firebase/database";
 // Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDbeJLOGv3WimOoZMmIMJo_396vub7JJJU",
@@ -22,6 +22,19 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+function writeUserData(name, email){
+
+  const db = getDatabase();
+  const reference = ref(db, 'users/' + userId);
+
+  set(reference, {
+    username: name,
+    email: email
+  });
+}
+
+writeUserData("tosin", "ttosinidowu@gmail.com")
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
