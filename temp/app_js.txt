@@ -1,0 +1,10 @@
+
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.navlist');
+
+let signInButton = document.querySelector('get-started');
+
+menu.onclick = () => {
+  // menu.classList.toggle('bx-menu');
+  navlist.classList.toggle('open');
+}

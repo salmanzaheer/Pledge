@@ -1,0 +1,85 @@
+<!--ALL OF THIS IS INSIDE THE BODY-->
+
+<script>
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "firebase/app";
+      import { getAnalytics } from "firebase/analytics";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDbeJLOGv3WimOoZMmIMJo_396vub7JJJU",
+        authDomain: "pledge-412.firebaseapp.com",
+        projectId: "pledge-412",
+        storageBucket: "pledge-412.appspot.com",
+        messagingSenderId: "53795986452",
+        appId: "1:53795986452:web:919f1c31be7b93d4e3db01",
+        measurementId: "G-4VCCB345XD"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+
+
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+
+      // update firestore settings
+      db.settings({ timestampsInSnapshots: true});
+    </script>
+    <!--END OF FIREBASE LINKS-->
+
+
+    <!--header-->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="logo">Pledge</a>
+
+        <ul class="navlist">
+          <li><a href="#">How it works</a></li>          
+          <li><a href="#">Causes we support</a></li>
+          <li><a href="#" class="get-started">Make a Pledge</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </nav>
+    </header>
+
+    <!--body-->
+    <section class="hero">
+      <div class="hero-text">
+        <h5>Fast, safe, convenient payments!</h5>
+        <p>Pay. Get paid. You set your own terms. Ready to make a Pledge?</p>
+        <a href="#" class="button auth-btn">Get Started</a>
+      </div>
+      
+      <div class="hero-img">
+        <img src="./images/pledgePhone.png">
+      </div>
+    </section>
+
+
+    <!--footer-->
+    <footer>
+      <div class="footlist">
+        <a href="#" class="logo-footer"><p class="make-a">Make a</p>Pledge</a>
+
+
+        <ul class="navlist-foot">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Whats ahead?</a></li>
+        </ul>
+
+
+      </div>
+    </footer>
+
+    <!--custom js link-->
+    <script src="../src/App.js"></script>
