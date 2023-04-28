@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #ffffff;
+  background: #f6f5f7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,10 +17,13 @@ body {
   font-family: "Lato", sans-serif;
   height: 100vh;
   margin: -20px 0 50px;
+  padding-top: 100px;
+  padding-bottom: 180px;
 }
 
 header .navbar {
   position: fixed;
+  height: 100px;
   right: 0;
   top: 0;
   z-index: 1000;
@@ -187,12 +190,13 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 160px;
 }
 
 footer .footlist {
   right: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 10000;
   width: 100%;
   display: flex;
   align-items: center;
@@ -411,7 +415,7 @@ input {
 }
 
 .container.right-panel-active .overlay-left {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .overlay-right {
@@ -482,15 +486,16 @@ input {
   }
 
   .hero-text {
-    padding-top: 115px;
+    padding-top: 25vh;
   }
 
   .hero-img {
     text-align: center;
   }
   .hero-img img {
-    width: 430px;
+    width: 400px;
     height: auto;
+    padding-bottom: 30vh;
   }
 
   .hero {
@@ -550,11 +555,79 @@ input {
     width: 22.5%;
     transition: 0.2s;
   }
+
+  .container {
+    width: 300px;
+  }
+
+  .overlay-container {
+    transform: translateY(150%);
+    left: 0%;
+    width: 100%;
+    height: 50%;
+  }
+
+  .container.right-panel-active .overlay-container {
+    transform: translateX(0);
+    transform: translateY(150%);
+    left: 0%;
+    width: 100%;
+    height: 50%;
+  }
+
+  .container.right-panel-active .sign-up-container {
+    transform: translateX(0);
+    width: 100%;
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+  }
+
+  .sign-in-container {
+    transform: translateY(0);
+    width: 100%;
+    height: 70%;
+  }
+
+  .sign-up-container {
+    width: 100%;
+    transform: translateX(100%);
+    height: 70%;
+  }
+
+  .form-container .sign-in-container {
+    width: 100%;
+    transform: translateX(100%);
+  }
+
+  h1 {
+    display: none;
+  }
+
+  p {
+    display: none;
+  }
+
+  button.overlay-panel {
+    display: none;
+  }
+
+  .overlay {
+    left: -100%;
+    height: 50%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  footer {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   .hero-img img {
-    width: 80%;
+    width: 0%;
     height: auto;
   }
 }

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { signOut } from "firebase/auth";
+import { useState } from "react";
 
 export const Navbar = () => {
   const logout = async () => {
@@ -10,6 +11,15 @@ export const Navbar = () => {
       console.error(err);
     }
   };
+
+  const [move, setMove] = useState(false);
+
+  function handleMove() {
+    setMove((move) => !move);
+  }
+
+  let togglePanel = move ? " open" : "";
+
   return (
     <div>
       <header>
@@ -18,7 +28,7 @@ export const Navbar = () => {
             Pledge
           </Link>
 
-          <ul class="navlist">
+          <ul class={`navlist${togglePanel}`}>
             <button onClick={logout}>Sign Out</button>
             <li>
               <Link to="/">How it works</Link>
@@ -33,7 +43,7 @@ export const Navbar = () => {
             </li>
           </ul>
 
-          <div class="bx bx-menu" id="menu-icon"></div>
+          <div class="bx bx-menu" id="menu-icon" onClick={handleMove}></div>
         </nav>
       </header>
 
