@@ -1,29 +1,28 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
   list-style: none;
   text-decoration: none;
 }
 
 body {
-  background: #f6f5f7;
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Lato", sans-serif;
   height: 100vh;
   margin: -20px 0 50px;
   padding-top: 100px;
-  padding-bottom: 180px;
+  padding-bottom: 8em;
 }
 
 header .navbar {
   position: fixed;
-  height: 100px;
   right: 0;
   top: 0;
   z-index: 1000;
@@ -60,6 +59,11 @@ header .navbar {
   box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
 }
 
+.navbar .get-started:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
 .navlist {
   display: flex;
 }
@@ -86,6 +90,7 @@ header .navbar {
   display: none;
 }
 
+/* Button to take user to authentication page */
 .button {
   text-decoration: none;
   text-align: center;
@@ -112,6 +117,7 @@ header .navbar {
   -moz-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
   box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
 }
+
 .button:hover {
   padding: 11px 32px;
   border: solid 1px #00914b;
@@ -182,6 +188,7 @@ section {
 
 .make-a {
   font-size: 20px;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -190,7 +197,6 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 160px;
 }
 
 footer .footlist {
@@ -312,7 +318,6 @@ input {
   width: 768px;
   max-width: 100%;
   min-height: 480px;
-  font-family: "Montserrat", sans-serif;
 }
 
 .form-container {
@@ -329,7 +334,7 @@ input {
 }
 
 .container.right-panel-active .sign-in-container {
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 
 .sign-up-container {

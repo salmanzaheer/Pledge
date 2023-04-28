@@ -1,17 +1,7 @@
 import { Link } from "react-router-dom";
-import { auth } from "../config/firebase";
-import { signOut } from "firebase/auth";
 import { useState } from "react";
 
 export const Navbar = () => {
-  const logout = async () => {
-    try {
-      await signOut(auth);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   const [move, setMove] = useState(false);
 
   function handleMove() {
@@ -29,7 +19,6 @@ export const Navbar = () => {
           </Link>
 
           <ul class={`navlist${togglePanel}`}>
-            <button onClick={logout}>Sign Out</button>
             <li>
               <Link to="/">How it works</Link>
             </li>
