@@ -1,5 +1,6 @@
 import React from 'react'
 import "../App.css"
+import heroImg from './images/pledgePhone.png'
 
 function Hero() {
   return (
@@ -12,7 +13,7 @@ function Hero() {
         </div>
 
         <div className='hero-img'>
-            <img src='../../public/images/pledgePhone.png'></img>
+            <img src={heroImg}></img>
         </div>
     </section>
     </>

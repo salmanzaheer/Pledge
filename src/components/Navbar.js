@@ -17,13 +17,13 @@ function Navbar() {
                     Pledge    
                 </a>
 
-                <ul className='navlist'>
+                <ul className={click ? 'navlist open' : 'navlist'}>
                     <li><a href='/'>How it works</a></li>
                     <li><a href='/'>Causes we support</a></li>
                     <li><a href='/' className='get-started'>Make a Pledge</a></li>
                 </ul>
 
-                <div className={click ? 'bx bx-menu' : 'bx bx-menu'} id='menu-icon' onClick={handleClick}>
+                <div className={click ? 'fas fa-times' : 'fas fa-bars'} id='menu-icon' onClick={handleClick}>
                     
                 </div>
             </nav>

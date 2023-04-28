@@ -44,7 +44,7 @@ header .navbar{
 
 .navbar .get-started:hover{
   color: #000;
-  border-bottom: 2px solid #000;
+  border: 2px solid #000;
 }
 
 
@@ -137,7 +137,7 @@ header .navbar{
 }
 
 .hero-img img{
-  width: 430px;
+  width: 400px;
   height: auto;
   object-fit: contain;
   background-size: cover;
@@ -250,21 +250,23 @@ footer .footlist{
   }
 
   .hero-text{
-    padding-top: 115px;
+    padding-top: 145px;
+    padding-bottom: 100px;
   }
 
   .hero-img{
     text-align: center;
+
   }
   .hero-img img{
-    width: 430px;
+    width: 300px;
     height: auto;
   }
 
   .hero{
     height: 100%;
     gap: 1rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -277,12 +279,19 @@ footer .footlist{
     transition: all .30s ease;
   }
 
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-img{
+    padding-right: 25%;
+  }
+
   .navlist{
     position: absolute;
     top: 100%;
     right: -100%;
     width: 290px;
-    height: 40vh;
+    height: 35vh;
     background: #02d871;
     display: flex;
     align-items: center;
@@ -294,7 +303,7 @@ footer .footlist{
   .navlist a{
     margin-left: 0;
     display: block;
-    margin: 20px 0;
+    margin: 30px 0;
   }
 
   .navlist.open{
@@ -315,14 +324,13 @@ footer .footlist{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 22.5%;
     transition: .2s;
   }
 }
 
 @media (max-width: 768px){
   .hero-img img{
-    width: 80%;
+    width: 60%;
     height: auto;
   }
 }
