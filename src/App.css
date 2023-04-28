@@ -329,7 +329,7 @@ input {
 }
 
 .container.right-panel-active .sign-in-container {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 
 .sign-up-container {
@@ -557,6 +557,7 @@ input {
   }
 
   .container {
+    top: 5em;
     width: 300px;
   }
 
