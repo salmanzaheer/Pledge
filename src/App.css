@@ -208,6 +208,8 @@ footer .footlist{
   border-bottom: 2px solid whitesmoke;
 }
 
+
+
 @media (max-width: 1535px){
   header{
     padding: 15px 3%;
@@ -291,7 +293,7 @@ footer .footlist{
     top: 100%;
     right: -100%;
     width: 290px;
-    height: 35vh;
+    height: 40vh;
     background: #02d871;
     display: flex;
     align-items: center;

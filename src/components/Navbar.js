@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "../App.css"
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
@@ -7,7 +8,6 @@ function Navbar() {
     const [click, setClick] = useState(false);
     
     const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false)
 
   return (
     <>
@@ -18,9 +18,9 @@ function Navbar() {
                 </a>
 
                 <ul className={click ? 'navlist open' : 'navlist'}>
-                    <li><a href='/'>How it works</a></li>
-                    <li><a href='/'>Causes we support</a></li>
-                    <li><a href='/' className='get-started'>Make a Pledge</a></li>
+                    <li><Link to='/'>How it works</Link></li>
+                    <li><Link to='/'>Causes we support</Link></li>
+                    <li><Link to='/login' className='get-started'>Make a Pledge</Link></li>
                 </ul>
 
                 <div className={click ? 'fas fa-times' : 'fas fa-bars'} id='menu-icon' onClick={handleClick}>
