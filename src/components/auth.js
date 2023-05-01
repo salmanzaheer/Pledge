@@ -92,7 +92,7 @@ export const Auth = (props) => {
             </div>
             <div class="overlay-panel overlay-right">
               <h1>Hello, Friend!</h1>
-              <p>Enter your personal details and make a pledge</p>
+              <p>Don't have an account? Press the sign up button below</p>
               <button class="ghost" onClick={handleMove} id="signUp">
                 Sign Up
               </button>
