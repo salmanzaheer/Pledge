@@ -1,5 +1,5 @@
 import { auth, googleProvider } from "../config/firebase";
-import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -7,13 +7,28 @@ export const Auth = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signUp = async () => {
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-    } catch (err) {
-      console.error(err);
-    }
+  const signIn = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   };
+
+  const signUp = (e) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      console.log(userCredential);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  };
+
 
   const signInWithGoogle = async () => {
     try {
@@ -33,11 +48,11 @@ export const Auth = (props) => {
 
   return (
     <div>
-      <div class={`container${togglePanel}`} id="container">
-        <div class="form-container sign-up-container">
+      <div className={`container${togglePanel}`} id="container">
+        <div className="form-container sign-up-container">
           <form action="#">
             <h1>Create Account</h1>
-            <div class="social-container">
+            <div className="social-container">
               <button onClick={signInWithGoogle} class="social">
                 Sign up with Google
               </button>
@@ -56,10 +71,10 @@ export const Auth = (props) => {
             <button onClick={signUp}>Sign Up</button>
           </form>
         </div>
-        <div class="form-container sign-in-container">
+        <div className="form-container sign-in-container">
           <form action="#">
             <h1>Sign in</h1>
-            <div class="social-container">
+            <div className="social-container">
               <button onClick={signInWithGoogle} class="social">
                 Sign in with Google
               </button>
@@ -76,21 +91,21 @@ export const Auth = (props) => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <Link to="/">Forgot your password?</Link>
-            <button onClick={signUp}>Sign In</button>
+            <button onClick={signIn}>Sign In</button>
           </form>
         </div>
-        <div class="overlay-container">
-          <div class="overlay">
-            <div class="overlay-panel overlay-left">
+        <div className="overlay-container">
+          <div className="overlay">
+            <div className="overlay-panel overlay-left">
               <h1>Welcome Back!</h1>
               <p>
                 To keep connected with us please login with your personal info
               </p>
-              <button class="ghost" onClick={handleMove} id="signIn">
+              <button className="ghost" onClick={handleMove} id="signIn">
                 Sign In
               </button>
             </div>
-            <div class="overlay-panel overlay-right">
+            <div className="overlay-panel overlay-right">
               <h1>Hello, Friend!</h1>
               <p>Don't have an account? Press the sign up button below</p>
               <button class="ghost" onClick={handleMove} id="signUp">
