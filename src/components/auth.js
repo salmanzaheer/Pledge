@@ -1,7 +1,8 @@
-import { auth, googleProvider } from "../config/firebase";
+import { auth, googleProvider, db } from "../config/firebase";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { getFirestore, collection, addDoc, setDoc, doc } from "firebase/firestore";
 
 export const Auth = (props) => {
   const [email, setEmail] = useState("");
@@ -22,17 +23,33 @@ export const Auth = (props) => {
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      console.log(userCredential);
+      setDoc(doc(db, "users", user.uid),{
+        email: user.email,
+        createdAt: new Date()
+      })
+      .then(() => {
+        console.log("User data successfully stored in Firestore");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     })
     .catch((error) => {
       console.log(error);
-    });
+    })
   };
-
 
   const signInWithGoogle = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+      const result = await signInWithPopup(auth, googleProvider);
+      const { email, uid } = result.user;
+      const userData = {
+        email: email,
+        createdAt: new Date(),
+      };
+      const userDocRef = doc(db, "users", uid);
+      await setDoc(userDocRef, userData);
+      console.log("User data successfully stored in Firestore");
     } catch (err) {
       console.error(err);
     }
