@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>User Settings Page</title>
+    <link rel = "stylesheet" href = "Profile.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+</head>
+<body>
+
+    <div class = "container">
+        <div class = "leftbox">
+            <nav>
+                <a onclick = "tabs(0)"
+                    class="tab active">
+                    <i class= "fa fa-user"></i>
+                </a>
+                <a onclick = "tabs(1)"
+                    class="tab">
+                    <i class= "fa fa-credit-card"></i>
+                </a>
+                <a onclick = "tabs(2)"
+                    class="tab">
+                    <i class= "fa fa-tv"></i>
+                </a>
+                <a onclick = "tabs(3)"
+                    class="tab">
+                    <i class= "fa fa-tasks"></i>
+                </a>
+                <a onclick = "tabs(4)"
+                    class="tab">
+                    <i class= "fa fa-cogs"></i>
+                </a>
+            </nav>
+        </div>
+        <div class = "rightbox">
+            <div class = "profile tabShow">
+                <h1>Personal Info</h1>
+                <h2>Full Name</h2>
+                <input type = "text"
+                class = "input" value = "Jane Doe">
+                <h2>Birthday</h2>
+                <input type = "text"
+                class = "input" value = "Jane Doe">
+                <h2>Gender</h2>
+                <input type = "text"
+                class = "input" value = "Female">
+                <h2>Email</h2>
+                <input type = "text"
+                class = "input" value = "example@example.com">
+                <h2>Password</h2>
+                <input type = "password"
+                class = "input" value = "brightcode">
+                <button class="btn">Update</button>
+            </div>
+    
+            <div class = "payment tabShow">
+                <h1>Payment Info</h1>
+                <h2>Payment Method</h2>
+                <input type = "text"
+                class = "input" value = "Discover - 0234 **** *** 7890">
+                <h2>Billing Address</h2>
+                <input type = "text"
+                class = "input" value = "1234 some street">
+                <h2>Zip Code</h2>
+                <input type = "text"
+                class = "input" value = "419911">
+                <h2>Billing Date</h2>
+                <input type = "text"
+                class = "input" value = "Jan 20, 2017">
+                <h2>Redeem Card</h2>
+                <input type = "password"
+                class = "input" value = "Enter Gift Code">
+                <button class="btn">Update</button>
+            </div>
+
+            <div class = "paymentPlan tabShow">
+                <h1>Payment Plan Info</h1>
+                <h2>Payment Date</h2>
+                <p>May 2, 2023</p>
+                <h2>Next Charges</h2>
+                <p>$80.50 <span>includes tax</span></p>
+                <h2>Plan</h2>
+                <p>Limited Plan</p>
+                <h2>Monthly</h2>
+                <p>$107.99/month</p>
+                <button class="btn">Update</button>
+            </div>
+
+            <div class = "privacy tabShow">
+                <h1>Privacy Settings</h1>
+                <p></p>
+                <h2>Manage Email Notifications</h2>
+                <p></p>
+                <h2>Manage Privacy Settings</h2>
+                <p></p>
+                <h2>View Terms of Use</h2>
+                <p></p>
+                <h2>Personalized Ad Experience</h2>
+                <p></p>
+                <h2>Protect Account</h2>
+                <p></p>
+                <button class="btn">Update</button>
+            </div>
+
+            <div class = "settings tabShow">
+                <h1>Account Settings</h1>
+                <p></p>
+                <h2>Hold Payment Plan</h2>
+                <p></p>
+                <h2>Cancel Payment Plan</h2>
+                <p></p>
+                <button class="btn">Update</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/2c1ec58bb9.js" crossorigin="anonymous"></script>    <script>
+
+    </script>
+    <script>
+
+    </script>
+</body>
+</html>
