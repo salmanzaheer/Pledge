@@ -4,6 +4,7 @@ import { Auth } from "./components/auth";
 import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
 import { Profile } from "./components/Profile";
+import {Transactions} from "./components/Transactions";
 
 function App() {
   return (
