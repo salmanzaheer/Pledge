@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Auth } from "./components/auth";
 import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
+import { Profile } from "./components/Profile";
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Auth />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>
     </div>

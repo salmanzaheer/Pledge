@@ -3,15 +3,19 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithP
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { getFirestore, collection, addDoc, setDoc, doc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 export const Auth = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const signIn = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
+      navigate("/profile");
+
     })
     .catch((error) => {
       console.log(error);
@@ -29,6 +33,8 @@ export const Auth = (props) => {
       })
       .then(() => {
         console.log("User data successfully stored in Firestore");
+        navigate("/profile");
+
       })
       .catch((error) => {
         console.log(error);
@@ -50,6 +56,8 @@ export const Auth = (props) => {
       const userDocRef = doc(db, "users", uid);
       await setDoc(userDocRef, userData);
       console.log("User data successfully stored in Firestore");
+      navigate("/profile");
+
     } catch (err) {
       console.error(err);
     }
