@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './style.css';
+//import './style.css';
 
-function Transactions() {
+export const Transactions = () => {
   const [to, setTo] = useState('');
   const [amount, setAmount] = useState('');
   const [note, setNote] = useState('');
@@ -14,7 +14,7 @@ function Transactions() {
   return (
     <div style={{ textAlign: 'center', background: 'linear-gradient(to right, green, white)' }}>
       <form onSubmit={handleSubmit}>
-        <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'white' }}>
+        <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'black' }}>
           To:
           <input type="text" value={to} onChange={(e) => setTo(e.target.value)} />
         </label>
@@ -35,4 +35,4 @@ function Transactions() {
   );
 }
 
-export default App;
+export default Transactions;
