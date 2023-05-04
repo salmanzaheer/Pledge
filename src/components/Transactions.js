@@ -24,14 +24,24 @@ export const Transactions = () => {
           To:
           <input type="text" value={to} onChange={(e) => setTo(e.target.value)} />
         </label>
+        <br/>
+        <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'black' }}>
+          Product:
+          <input type="text" value={to} onChange={(e) => setTo(e.target.value)} />
+        </label>
         <br />
         <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'black', backgroundColor: 'white' }}>
           Amount:
-          <input type="text" value={amount} onChange={(e) => setAmount(e.target.value)} />
+          <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
         </label>
         <br />
         <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'black' }}>
-          Note:
+          Number of Installments:
+          <input type="number" value={to} onChange={(e) => setTo(e.target.value)} />
+        </label>
+        <br/>
+        <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'black' }}>
+          Notes:
           <input type="text" value={note} onChange={(e) => setNote(e.target.value)} />
         </label>
         <br />
