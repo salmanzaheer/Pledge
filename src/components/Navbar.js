@@ -40,7 +40,7 @@ export const Navbar = () => {
       <footer>
         <div className="footlist">
           <Link to="/" className="logo-footer">
-            <p className="make-a">Make a</p>Pledge
+            <p className="make-a">Make a <br></br>Pledge</p>
           </Link>
 
           <ul className="navlist-foot">

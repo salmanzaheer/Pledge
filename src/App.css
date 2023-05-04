@@ -195,7 +195,6 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 150px;
 }
 
 
@@ -209,6 +208,7 @@ footer .footlist {
   align-items: center;
   justify-content: space-between;
   padding: 33px 9%;
+  height: 5em;
   background: #00bf63;
 }
 
