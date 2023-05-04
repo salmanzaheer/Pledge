@@ -27,7 +27,7 @@ header .navbar {
   top: 0;
   z-index: 1000;
   width: 100%;
-  height: 20px;
+  height: 8em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,6 +43,7 @@ header .navbar {
   border-radius: 15px;
   font: 30px;
   font-weight: 700;
+  color: #ffffff;
   background-color: #00d66f;
   background-image: -moz-linear-gradient(to bottom, #00d66f 0%, #005e31 100%);
   background-image: -webkit-linear-gradient(
@@ -53,13 +54,15 @@ header .navbar {
   background-image: -o-linear-gradient(to bottom, #00d66f 0%, #005e31 100%);
   background-image: -ms-linear-gradient(to bottom, #00d66f 0%, #005e31 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bf63', endColorstr='#00bf63',GradientType=0 );
-
-
+  background-image: linear-gradient(to bottom, #00d66f 0%, #00bf63 100%);
+  -webkit-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  -moz-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
 }
 
 .navbar .get-started:hover {
   color: #000;
-  border: 1px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .navlist {
@@ -162,7 +165,7 @@ header .navbar {
 
 .hero-img img {
   width: 430px;
-  height: 400px;
+  height: auto;
   object-fit: contain;
   background-size: cover;
   margin-left: 40%;
@@ -191,14 +194,12 @@ section {
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
+  height: 0.5em;
   width: 100%;
-  height: 150px;
 }
-
-
 
 footer .footlist {
   right: 0;
@@ -520,10 +521,6 @@ input {
     transition: all 0.3s ease;
   }
 
-  .navbar{
-    padding: 15px;
-  }
-
   .navlist {
     position: absolute;
     top: 100%;
@@ -628,10 +625,6 @@ input {
     width: 200%;
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
-  }
-
-  footer {
-    display: none;
   }
 }
 
