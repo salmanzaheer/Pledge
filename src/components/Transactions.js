@@ -19,7 +19,7 @@ export const Transactions = () => {
           <input type="text" value={to} onChange={(e) => setTo(e.target.value)} />
         </label>
         <br />
-        <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'white', backgroundColor: 'black' }}>
+        <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'black', backgroundColor: 'white' }}>
           Amount:
           <input type="text" value={amount} onChange={(e) => setAmount(e.target.value)} />
         </label>
