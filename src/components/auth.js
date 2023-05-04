@@ -21,6 +21,7 @@ export const Auth = (props) => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [value, setValue] = useState("");
+  const [error, setError] = useState(null);
 
   const signIn = (e) => {
     e.preventDefault();
@@ -30,11 +31,18 @@ export const Auth = (props) => {
       })
       .catch((error) => {
         console.log(error);
+        alert("Invalid login credentials. Please try again.");
       });
   };
 
   const signUp = (e) => {
     e.preventDefault();
+
+    if (!isValidEmail(email)){
+      alert("Pleas enter valid email address");
+      return;
+    }
+
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
@@ -55,6 +63,9 @@ export const Auth = (props) => {
       });
   };
 
+
+
+
   const signInWithGoogle = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
@@ -74,6 +85,10 @@ export const Auth = (props) => {
     }
   };
 
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
   const [move, setMove] = useState(false);
 
   function handleMove() {
@@ -91,6 +106,8 @@ export const Auth = (props) => {
           <div className="form-container sign-up-container">
             <form action="#">
               <h1>Create Account</h1>
+              {error && <p className="error">{error}</p>}
+
               <div className="social-container">
                 <button onClick={signInWithGoogle} class="social">
                   Sign up with Google
