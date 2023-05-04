@@ -14,7 +14,7 @@ import {
   doc,
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import Transactions from "./Transactions";
+import Dashboard from "./Dashboard";
 
 export const Auth = (props) => {
   const [email, setEmail] = useState("");
@@ -85,7 +85,7 @@ export const Auth = (props) => {
   return (
     <div>
       {value ? (
-        <Transactions />
+        <Dashboard />
       ) : (
         <div className={`container${togglePanel}`} id="container">
           <div className="form-container sign-up-container">
