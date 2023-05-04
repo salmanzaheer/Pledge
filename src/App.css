@@ -194,10 +194,10 @@ section {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
-  height: 0.5em;
+  height: 5em;
   width: 100%;
 }
 
