@@ -1,5 +1,8 @@
 # README
 
-Let's all try to pull this project and see if we can commit to it. 
+PLEDGE
+![alt text](https://github.com/salmanzaheer/Pledge/blob/main/public/images/pledge_img.png)
 
-## This is linked to firebase and react but my initial commit does not have our react application connected to the web.
+## A web-based application to send and receive payments using customized payment options!
+
+### Developed by Brittany Agha, Christopher Yue, Tosin Idowu & Salman Zaheer
