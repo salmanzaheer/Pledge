@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import { auth, googleProvider, db } from "../config/firebase";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { Link } from "react-router-dom";
+import { getFirestore, collection, addDoc, setDoc, doc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
+
 //import './style.css';
 
 export const Transactions = () => {
