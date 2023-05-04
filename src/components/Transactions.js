@@ -9,12 +9,31 @@ import { useNavigate } from "react-router-dom";
 
 export const Transactions = () => {
   const [to, setTo] = useState('');
+  const [product, setProduct] = useState('');
   const [amount, setAmount] = useState('');
+  const [installments, setInstallments] = useState('');
   const [note, setNote] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    window.alert('Submission confirmed.');
+    const user = auth.currentUser;
+    const db = getFirestore();
+    try {
+      const transactionRef = await addDoc(collection(db, "transactionRequests"), {
+        to,
+        product,
+        amount,
+        installments,
+        note,
+        user: user.uid
+      });
+      console.log("Transaction added with ID: ", transactionRef.id);
+      navigate('/');
+    } catch (e) {
+      console.error("Error adding transaction: ", e);
+    }
   };
 
   return (
@@ -27,7 +46,7 @@ export const Transactions = () => {
         <br/>
         <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'black' }}>
           Product:
-          <input type="text" value={to} onChange={(e) => setTo(e.target.value)} />
+          <input type="text" value={product} onChange={(e) => setProduct(e.target.value)} />
         </label>
         <br />
         <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'black', backgroundColor: 'white' }}>
@@ -37,7 +56,7 @@ export const Transactions = () => {
         <br />
         <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'black' }}>
           Number of Installments:
-          <input type="number" value={to} onChange={(e) => setTo(e.target.value)} />
+          <input type="number" value={installments} onChange={(e) => setInstallments(e.target.value)} />
         </label>
         <br/>
         <label style={{ fontFamily: 'Helvetica Neue', fontWeight: 'bold', color: 'black' }}>
