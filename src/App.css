@@ -194,10 +194,10 @@ section {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
-  height: 0.5em;
+  height: 5em;
   width: 100%;
 }
 
@@ -210,6 +210,7 @@ footer .footlist {
   align-items: center;
   justify-content: space-between;
   padding: 33px 9%;
+  height: 5em;
   background: #00bf63;
 }
 
