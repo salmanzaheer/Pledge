@@ -7,7 +7,7 @@ export const Home = () => {
         <div class="hero-text">
           <h5>Fast, safe, convenient payments!</h5>
           <p>Pay. Get paid. You set your own terms. Ready to make a Pledge?</p>
-          <Link to="/login" class="button auth-btn">
+          <Link to="" class="button auth-btn">
             Get Started
           </Link>
         </div>
