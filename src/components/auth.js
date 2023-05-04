@@ -27,6 +27,8 @@ export const Auth = (props) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        setValue(email);
+        localStorage.setItem("email", email);
         navigate("/dashboard");
       })
       .catch((error) => {
