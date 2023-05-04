@@ -39,7 +39,7 @@ export const Auth = (props) => {
     e.preventDefault();
 
     if (!isValidEmail(email)){
-      alert("Pleas enter valid email address");
+      alert("Please enter valid email address");
       return;
     }
 
