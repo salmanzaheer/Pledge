@@ -14,7 +14,7 @@ export const Auth = (props) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      navigate("/transactions");
+      navigate("/dashboard");
 
     })
     .catch((error) => {
@@ -56,7 +56,7 @@ export const Auth = (props) => {
       const userDocRef = doc(db, "users", uid);
       await setDoc(userDocRef, userData);
       console.log("User data successfully stored in Firestore");
-      navigate("/transactions");
+      navigate("/dashboard");
 
     } catch (err) {
       console.error(err);

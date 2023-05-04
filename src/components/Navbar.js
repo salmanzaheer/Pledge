@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import '../App.css';
 
 export const Navbar = () => {
   const [move, setMove] = useState(false);
@@ -13,12 +14,12 @@ export const Navbar = () => {
   return (
     <div>
       <header>
-        <nav class="navbar">
-          <Link to="/" class="logo">
+        <nav className="navbar">
+          <Link to="/" className="logo">
             Pledge
           </Link>
 
-          <ul class={`navlist${togglePanel}`}>
+          <ul className={`navlist${togglePanel}`}>
             <li>
               <Link to="/">How it works</Link>
             </li>
@@ -26,23 +27,23 @@ export const Navbar = () => {
               <Link to="/">Causes we support</Link>
             </li>
             <li>
-              <Link to="/login" class="get-started">
+              <Link to="/login" className="get-started">
                 Make a Pledge
               </Link>
             </li>
           </ul>
 
-          <div class="bx bx-menu" id="menu-icon" onClick={handleMove}></div>
+          <div className="bx bx-menu" id="menu-icon" onClick={handleMove}></div>
         </nav>
       </header>
 
       <footer>
-        <div class="footlist">
-          <Link to="/" class="logo-footer">
-            <p class="make-a">Make a</p>Pledge
+        <div className="footlist">
+          <Link to="/" className="logo-footer">
+            <p className="make-a">Make a</p>Pledge
           </Link>
 
-          <ul class="navlist-foot">
+          <ul className="navlist-foot">
             <li>
               <Link to="/">About us</Link>
             </li>
