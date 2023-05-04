@@ -54,7 +54,9 @@ export const Auth = (props) => {
         })
           .then(() => {
             console.log("User data successfully stored in Firestore");
-            navigate("/profile");
+            alert("Account successfully made");
+
+            navigate("/dashboard");
           })
           .catch((error) => {
             console.log(error);
