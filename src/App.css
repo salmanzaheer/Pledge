@@ -42,7 +42,6 @@ header .navbar {
   border-radius: 15px;
   font: 30px;
   font-weight: 700;
-  color: #ffffff;
   background-color: #00d66f;
   background-image: -moz-linear-gradient(to bottom, #00d66f 0%, #005e31 100%);
   background-image: -webkit-linear-gradient(
@@ -53,15 +52,13 @@ header .navbar {
   background-image: -o-linear-gradient(to bottom, #00d66f 0%, #005e31 100%);
   background-image: -ms-linear-gradient(to bottom, #00d66f 0%, #005e31 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bf63', endColorstr='#00bf63',GradientType=0 );
-  background-image: linear-gradient(to bottom, #00d66f 0%, #00bf63 100%);
-  -webkit-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
-  -moz-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
-  box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+
+
 }
 
 .navbar .get-started:hover {
   color: #000;
-  border-bottom: 2px solid #000;
+  border: 1px solid #000;
 }
 
 .navlist {
@@ -164,7 +161,7 @@ header .navbar {
 
 .hero-img img {
   width: 430px;
-  height: auto;
+  height: 400px;
   object-fit: contain;
   background-size: cover;
   margin-left: 40%;
