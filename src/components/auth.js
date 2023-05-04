@@ -44,7 +44,7 @@ export const Auth = (props) => {
       alert("Please enter valid email address");
       return;
     }
-
+    
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
